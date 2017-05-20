@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Image Search Abstraction Layer</title>
+  <title>File Uploader Thingy</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <h1>Image Search Abstraction Layer</h1>
+    <h1>File Uploader Thingy</h1>
     <br>
     <div class="container">
+        <!-- TODO: update url after deploying to heroku -->
+        <!-- TODO: figure out how to use __dirname in html-->
+        <form action="https://api-projects-scamargo.c9users.io/upload" method="post" enctype="multipart/form-data">
+            <input id="image-file" name="image-file" type="file" />
+            <label for="name">Name:</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Enter your full name" />
+            <input type="text" id="lastname" name="lastname" placeholder="Enter your lastname" />
+            <label id="filename"><br><br>
+            <input type="submit" value="Submit">
+            <input type="reset">
+        </form>
         <h2>Example Image Search:</h2>
         <p class="example">https://img-ab-layer.herokuapp.com/api/imagesearch/</p>
         <h2>Example Image Search (with search string):</h2>
