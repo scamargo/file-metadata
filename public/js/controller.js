@@ -1,7 +1,7 @@
 $(document).ready(function(event) {
     // process the form
-    $("form#data").submit(function() {
-
+    $("form#data").submit(function(event) {
+        event.preventDefault()
         var formData = new FormData(this);
         
         // process the form
@@ -22,9 +22,5 @@ $(document).ready(function(event) {
             // here we will handle errors and validation messages
         });
         
-        // stop the form from submitting the normal way and refreshing the page
-        //event.preventDefault();
-    
-        return false;
     });
 });
