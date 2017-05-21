@@ -1,4 +1,6 @@
 $(document).ready(function(event) {
+    
+    var url = '/upload';
     // process the form
     $("form#data").submit(function(event) {
         event.preventDefault()
@@ -7,7 +9,7 @@ $(document).ready(function(event) {
         // process the form
         $.ajax({
             type        : 'POST',
-            url         : $(this).attr("action"), // the url where we want to POST
+            url         : url, // the url where we want to POST
             contentType: false,
             processData: false,
             data        : formData, // our data object
