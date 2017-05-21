@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>File Uploader Thingy</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>File Uploader Thingy</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="/jquery/jquery.js"></script>
+    <script src="js/controller.js"></script>
 </head>
 <body>
     <h1>File Uploader Thingy</h1>
@@ -10,27 +12,14 @@
     <div class="container">
         <!-- TODO: update url after deploying to heroku -->
         <!-- TODO: figure out how to use __dirname in html-->
-        <form action="https://api-projects-scamargo.c9users.io/upload" method="post" enctype="multipart/form-data">
+        <form id="data" action="https://api-projects-scamargo.c9users.io/upload" method="post" enctype="multipart/form-data" onsubmit="return false">
             <input id="image-file" name="image-file" type="file" />
-            <label for="name">Name:</label>
-            <input type="text" id="firstname" name="firstname" placeholder="Enter your full name" />
-            <input type="text" id="lastname" name="lastname" placeholder="Enter your lastname" />
-            <label id="filename"><br><br>
+            <br><br>
             <input type="submit" value="Submit">
             <input type="reset">
         </form>
-        <h2>Example Image Search:</h2>
-        <p class="example">https://img-ab-layer.herokuapp.com/api/imagesearch/</p>
-        <h2>Example Image Search (with search string):</h2>
-        <p class="example">https://img-ab-layer.herokuapp.com/api/imagesearch/homework</p>
-        <h2>Example Image Search (with offset):</h2>
-        <p class="example">https://img-ab-layer.herokuapp.com/api/imagesearch/?offset=1</p>
-        <h2>Example Get Latest Image Searches:</h2>
-        <p class="example">https://img-ab-layer.herokuapp.com/api/latest/imagesearch</p>
-        <h2>Example Add Image:</h2>
-        <p class="example">https://img-ab-layer.herokuapp.com/api/addimage?url=https://fanart.tv/fanart/movies/9678/moviethumb/little-nicky-566a799b37cf0.jpg&snippet=Little Nicky | Movie fanart</p>
         <br><br>
-        <a href="https://github.com/scamargo/image-search">Github Repo</a>
+        <a id="test" href="https://github.com/scamargo/file-metadata" target="_blank">Github Repo</a>
     </div>
 </body>
 </html>
